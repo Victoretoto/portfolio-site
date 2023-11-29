@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.profile-pic img{
+    height: 150px;
+    width: 150px;
+}
+body{
+    background:linear-gradient(20deg, #2C2C2C, white);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+}
+.profile-card{
+    background: #111;
+    width: 450px;
+    min-height: 450px;
+    color: white;
+    align-items: center;
+    margin: 15px;
+    padding: 5rem;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.profile-card .profile-pic{
+    margin: 15px;
+    overflow: hidden;
+}
+.profile-card .profile-pic img{
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.profile-card .profile-pic img:hover{
+    border: 10px dotted rgb(144, 151, 144)
+
+}
+.profile-card .profile-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile-details .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-details .details h2{
+    font-weight: 60;
+    margin-top: 20px;
+}
+.profile-details .details h3{
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 17px;
+    background:#2C2C2C;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: -8px -8px 15px rgb(144, 151, 144), 5px 5px 15px rgba(134, 121, 121, 0.2);
+}
+.profile-details .details .socials{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.profile-details .details .socials i{
+   background-color: #2C2C2C;
+   margin: 5px;
+   width: 25px;
+   height: 25px;
+   text-align: center;
+   line-height: 25px;
+   border-radius: 4px;
+   transition: 0.5s ease;
+}
+.profile-details .details .socials i:hover{
+    transform: translateY(-10px);
+    border: 3px solid rgb(255, 255, 255, 0.3);
+}
+.profile-details .contact-info{
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+.profile-details .contact-info .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+   
+}
+.contact-info .row .icon{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #111;
+    text-align: center;
+    transition: 0.4s ease-in;
+}
+.contact-info .row .icon:hover{
+    transform: scale(1.2);
+    border: 1px solid rgb(255, 255, 255, 0.3);
+}
+.row .content{
+    min-width: 70%;
+}
+.row .content span{
+    font-size: 12px;
+}
+.row .content h4{
+    font-size: 13px;
+}
+.cv-link{
+    margin-top: 20px;
+    padding: 15px;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid white;
+    transition: 0.4s ease;
+}
+.cv-link:hover{
+    transform: scale(1.1);
+}
+.about{
+    max-width: 800px;
+    background-color: #111;
+    padding: 2rem 3rem;
+    border-radius: 14px;
+}
+.about h1{
+    color: white;
+    margin-bottom: 1.1rem;
+    font-weight: 100;
+    font-size: 4rem;
+    font-family: fantasy;
+    display: inline-block;
+    position: relative;
+}
+.about h1::after{
+    position: absolute;
+   content: "";
+    top: 75%;
+    right: -50%;
+    width: 50%;
+    height: 6px;
+    background: linear-gradient(25deg, black, white);
+}
+.about p{
+    color: #555;
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+.about h2{
+    color: whitesmoke;
+    margin-bottom: 1rem;
+}
+.about .work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.about .workbox{
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid #555;
+    border-radius: 10px;
+    padding: 1rem ;
+    margin: 1rem;
+    transition: 0.5s ease-in-out;
+}
+.about .workbox:hover{
+    border: 4px dotted #555;
+
+}
+.work .workbox .desc{
+    color: #555;
+    width: 70%;
+}
+.work .workbox .desc h3{
+    color: whitesmoke;
+    margin: 3px 0 ;
+}
+.work .workbox .desc p{
+    margin: 0px;
+}
+
+/* Responsitivity */
+@media(max-width: 768px)
+{
+    .about{
+        width: 1005;
+        max-width: 400px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .about h1{
+        font-size: 2.2rem;
+
+    }
+    .about .work{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,auto);
+    }
+}
